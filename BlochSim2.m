@@ -6,12 +6,6 @@ M = [1,0,0]';
 disp('Matrix M')
 disp(M)
 
-%% Part a2: Transverse Relaxation
-% A-2a) Magnetization M1 as only x-component 
-T2 = 100;
-t = 50;
-Mx = exp(-t/T2);
-M1 = M*Mx;
 %% Part A-2: Transverse Relaxation  
 %  -------------------------------- %
 %% A-2a) Magnetization vector due to T2 decay after 50ms (x-component only)
@@ -24,9 +18,6 @@ M1 = M * Mx; % apply equilibrium magnetization vector
 disp('Magnetization M1')
 disp(M1)
 
-% A-2b) M1 = A*M with A being 3x3 matrix
-A = M1/M;
-disp('Matrix A')
 %% A-2b) Express M1 = A*M with A being 3x3 matrix
 
 A = [Mx,0,0;0,Mx,0;0,0,1]; % State matrix A for transverse magnetization where Mx is that stated in A-2a

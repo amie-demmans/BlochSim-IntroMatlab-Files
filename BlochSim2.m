@@ -12,6 +12,15 @@ T2 = 100;
 t = 50;
 Mx = exp(-t/T2);
 M1 = M*Mx;
+%% Part A-2: Transverse Relaxation  
+%  -------------------------------- %
+%% A-2a) Magnetization vector due to T2 decay after 50ms (x-component only)
+ 
+T2 = 100; % Transverse relaxation time (ms)
+t = 50;   % time (ms)
+
+Mx =(exp(-t/T2)); % x-component magnetization vector
+M1 = M * Mx; % apply equilibrium magnetization vector  
 disp('Magnetization M1')
 disp(M1)
 
